@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="8dp"
+    android:layout_margin="20dp"
+    android:layout_marginTop="10dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/emagazine"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"/>
+
+        <TextView
+            android:id="@+id/Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Amazibjadg askdjhask askdaskj lasjkd"
+            android:textSize="18sp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/author"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="asjkdhasjkdnlas"/>
+
+        <TextView
+            android:id="@+id/directedat"
+            android:gravity="end"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="aslkdjas"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
