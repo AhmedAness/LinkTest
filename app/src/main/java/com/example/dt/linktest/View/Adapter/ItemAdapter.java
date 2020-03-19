@@ -59,12 +59,15 @@ public class ItemAdapter extends ListAdapter<articles, ItemAdapter.CourseHolder>
     public void onBindViewHolder(@NonNull CourseHolder holder, int position) {
         articles item = getItem(position);
         if (!item.getUrlToImage().isEmpty()) {
+            holder.imageView.setVisibility(View.VISIBLE);
             Picasso.with(context).
                     load(item.getUrlToImage()).into(holder.imageView);
+        }else {
+            holder.imageView.setVisibility(View.GONE);
+        }
             holder.Title.setText(item.getTitle());
             holder.Auth.setText("By " + item.getAuthor());
             holder.Directedat.setText(String.valueOf(item.getPublishedAt()));
-        }
 
     }
 

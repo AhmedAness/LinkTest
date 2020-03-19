@@ -18,9 +18,6 @@ import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.dt.linktest.Model.ApiClient;
-import com.example.dt.linktest.Model.ApiInterface;
-import com.example.dt.linktest.Model.Item;
 import com.example.dt.linktest.Model.articles;
 import com.example.dt.linktest.R;
 import com.example.dt.linktest.View.Adapter.ItemAdapter;
@@ -32,7 +29,6 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import retrofit2.Call;
 
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -69,7 +65,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         viewModel.getData().observe(this, new Observer<List<articles>>() {
             @Override
             public void onChanged(List<articles> courses) {
-                if (courses.size() > 0&&!courses.get(0).getUrlToImage().isEmpty()) {
+                if (courses.size() > 0) {
                     Allcourses.clear();
                     Allcourses.addAll(courses);
                     LinearLayoutManager linearLayoutManager = new LinearLayoutManager(MainActivity.this);
@@ -81,9 +77,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             }
 
         });
-
-        viewModel.LoadData();
-
 
     }
 

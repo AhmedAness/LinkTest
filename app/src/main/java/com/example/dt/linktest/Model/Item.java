@@ -17,6 +17,7 @@ public class Item {
     String status;
 
     @SerializedName("articles")
+    public
     ArrayList<articles> articles;
 
 
